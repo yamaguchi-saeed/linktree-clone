@@ -1,0 +1,99 @@
+/* Custom gradient backgrounds with water-like flowing animation */
+.gradient-bg-1 {
+  background: linear-gradient(-45deg, #dc143c, #d4af37, #8b0000);
+  background-size: 400% 400%;
+  animation: water-flow 20s ease-in-out infinite;
+}
+
+.gradient-bg-2 {
+  background: linear-gradient(-45deg, #d4af37, #dc143c, #b8860b);
+  background-size: 400% 400%;
+  animation: water-flow 25s ease-in-out infinite;
+}
+
+.gradient-bg-3 {
+  background: linear-gradient(-45deg, #8b0000, #b8860b, #dc143c);
+  background-size: 400% 400%;
+  animation: water-flow 30s ease-in-out infinite;
+}
+
+/* Water-like flowing animation keyframes */
+@keyframes water-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 25%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  75% {
+    background-position: 25% 75%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Glassmorphism effect - improved for better text readability */
+.glass {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(220, 20, 60, 0.2);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(212, 175, 55, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(220, 20, 60, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(220, 20, 60, 0.5);
+}
+
+/* Smooth transitions for all elements */
+* {
+  transition: all 0.3s ease;
+}
+
+/* Responsive text scaling */
+@media (max-width: 640px) {
+  .text-responsive {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+  }
+}
+
+/* Animated gradient text effect inspired by the Cruip tutorial */
+.gradient-text {
+  background: linear-gradient(-45deg, #dc143c, #d4af37, #8b0000, #dc143c);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-text-flow 8s ease-in-out infinite;
+}
+
+@keyframes gradient-text-flow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
